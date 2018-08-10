@@ -3,16 +3,20 @@ package institution.interlink;
 import person.Student;
 
 public class Internship {
+    private String name;
     public Internship(String name) {
-        //TODO: Implementation is needed
+        this.name = name;
+        ArrayList<Student> intership = new ArrayList<>();
     }
 
     public void setStudent(Student student) {
-        //TODO: Implementation is needed
+        intership.add(student);
     }
 
     public String getStudents() {
-        //TODO: Implementation is needed
-        return "Andrew Maslenko\nJulia Veselkina\n";
+        String studentList = "";
+        for(Student student : intership)
+            {studentList = studentList + student.getName + "/n";}
+        return studentList
     }
 }
